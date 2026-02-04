@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>S10.21day</title> 
+<title>S10.21day</title> 
 <link rel="stylesheet" type="text/css" href="webix.css">
 <script type="text/javascript" src="webix.js"></script>
 <style> .tpred { color: #EC3774; background: #fff; border: .4em solid; border-color: rgb(256,256,256); margin: 0 0 0 -.4em;}</style>
@@ -11,7 +11,7 @@
 </head>
 
 <body>
-&emsp;<span style='color:blue'><i><b>S10.run.adds</b></i></span>&emsp;<input type="file" name="inputfile" id="inputfile" accept=".html">&emsp;<span id="ffile"></span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="student"></span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="trainer"></span>
+&emsp;<span style='color:blue'><i><b>S10.21day</b></i></span>&emsp;<input type="file" name="inputfile" id="inputfile" accept=".html">&emsp;<span id="ffile"></span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="student"></span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="trainer"></span>
     <pre id="output"></pre>
 
 <script type="text/javascript">
@@ -25,18 +25,6 @@ var m1 = "mountPage('studentTasks',";
 var m2 = "<!-- Meta Pixel Code -->" ;
 
 var f ;
-
-
-//async function getPageContent(url) {
-    // credentials: 'include' заставляет fetch использовать текущие куки браузера
-//    const response = await fetch(url, { credentials: 'include' });
-    
-    // Сохраняем HTML-код в символьную переменную
-//    const pageHtml = await response.text();
-    
-//    console.log(pageHtml); // Вывод в консоль
-//    return pageHtml;
-//}
 
         document.getElementById('inputfile').addEventListener('change', function () {
                 fff = this.files[0].name;
@@ -57,7 +45,7 @@ var f ;
 
 
 				
- if ( a.includes(m1) && a.includes(m2)	&& !(fff.includes('s10.adds.html'))	) {	  
+ if ( a.includes(m1) && a.includes(m2)	&& !(fff.includes('s10.21day.html'))	) {	  
 				
                 b="["+ a.slice(a.indexOf(m1)+m1.length);
                 c=b.slice(0,b.lastIndexOf(m2)-13)+"]";
@@ -684,4 +672,3 @@ webix.ui(
 </body>
 
 </html>
-
