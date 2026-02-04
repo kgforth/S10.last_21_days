@@ -26,15 +26,25 @@ var m2 = "<!-- Meta Pixel Code -->" ;
 
 var f ;
 
-        document.getElementById('inputfile').addEventListener('change', function () {
-                fff = this.files[0].name;
-                let fr = new FileReader();
-                fr.onload = function () {
-//                    document.getElementById('output').textContent = fr.result;
 
-                a= fr.result;
+// 1. Сразу сообщаем родителю, что мы загрузились
+if (window.opener) {
+    window.opener.postMessage("PARSER_READY", "*");
+} else {
+    console.error("Окно-родитель не найдено. Запустите через букмарклет.");
+}
 
+//        document.getElementById('inputfile').addEventListener('change', function () {
+//                fff = this.files[0].name;
+//                let fr = new FileReader();
+//                fr.onload = function () {    a= fr.result;
 
+window.addEventListener("message", (event) => {
+    // Проверка, что пришло именно наше сообщение
+    if (event.data && event.data.type === "DATA_PAYLOAD") {
+        const receivedText = event.data.text;
+        console.log("Успех! Получено символов:", receivedText.length);
+		a=receivedText;
 
 
 // Пример использования:
@@ -660,11 +670,14 @@ webix.ui(
 
                 }
 
-                fr.readAsText(this.files[0]);
-            })
+//                fr.readAsText(this.files[0]);
+//            })
 
 
-
+        // ВАШ ПАРСЕР ТУТ:
+        // startParsing(receivedText); 
+    }
+});
 
 
 </script>
