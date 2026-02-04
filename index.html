@@ -23,6 +23,7 @@ var c ;
 var d ;
 var m1 = "mountPage('studentTasks',";
 var m2 = "<!-- Meta Pixel Code -->" ;
+var m3 = '"trainingsRequests":';	
 
 var f ;
 
@@ -58,9 +59,10 @@ window.addEventListener("message", (event) => {
  if ( a.includes(m1) && a.includes(m2)	) {	  
 				
                 b="["+ a.slice(a.indexOf(m1)+m1.length);
-                c=b.slice(0,b.lastIndexOf(m2)-13)+"]";
+//                c=b.slice(0,b.lastIndexOf(m2)-13)+"]";
+                c=b.slice(0,b.lastIndexOf(m3))+'"trainingsRequests": []}]';
 
-alert(c.slice(-40));
+//alert(c.slice(-40));
 	 
 } else {
 
