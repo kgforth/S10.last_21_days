@@ -32,7 +32,7 @@ var f ;
 if (window.opener) {
     window.opener.postMessage("PARSER_READY", "*");
 } else {
-    console.error("Окно-родитель не найдено. Запустите через букмарклет.");
+    alert("Запустите букмарклет на фоне раздела задач S10.run");
 }
 
 //        document.getElementById('inputfile').addEventListener('change', function () {
@@ -44,7 +44,7 @@ window.addEventListener("message", (event) => {
     // Проверка, что пришло именно наше сообщение
     if (event.data && event.data.type === "DATA_PAYLOAD") {
         const receivedText = event.data.text;
-        console.log("Успех! Получено символов:", receivedText.length);
+//        console.log("Успех! Получено символов:", receivedText.length);
 		a=receivedText;
 
 
