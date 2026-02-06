@@ -248,7 +248,12 @@ if ( tt === undefined) {
 }
  tmp = Math.max(tmp,tt);
  }
-        return tmp;
+if ( tmp === 0 ) {
+return NaN; 
+} else {
+  return tmp;
+ }
+
  } catch {
       try {
 			tmp = 0;
