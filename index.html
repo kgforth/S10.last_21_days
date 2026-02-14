@@ -512,7 +512,7 @@ cols:[
     ]
   }	,	  
   series:[
-    {  type:"line",  value:"#timed#", item:{radius:2,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
+    {  type:"spline",  value:"#timed#", item:{radius:2,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
   ],		  
           data: gg
         }
@@ -554,7 +554,7 @@ cols:[
     ]
   }	,	  
   series:[
-    {  type:"line",  value:"#kmCompleted#", item:{radius:2,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
+    {  type:"spline",  value:"#kmCompleted#", item:{radius:2,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
   ],		  
           data: gg
         }
@@ -599,9 +599,9 @@ cols:[
       }
     }
   },  series:[
-    {  type:"line",  value:"#pace5000#", tooltip:{css:"tpyellow",template:function(obj) {return To_Pace(obj.pace5000);}}, item:{radius:3,borderColor: "#e9df40"}, line:{color:"#e9df40",width:2} },
-    {  type:"line",  value:"#pace1000#", tooltip:{css:"tpblue",template:function(obj) {return To_Pace(obj.pace1000);}}, item:{radius:3,borderColor: "#00ccff"}, line:{color:"#00ccff",width:2} },
-    {  type:"line",  value:"#pace200#", tooltip:{css:"tpred", template:function(obj) {return To_Pace(obj.pace200);}}, item:{radius:3,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
+    {  type:"spline",  value:"#pace5000#", tooltip:{css:"tpyellow",template:function(obj) {return To_Pace(obj.pace5000);}}, item:{radius:3,borderColor: "#e9df40"}, line:{color:"#e9df40",width:2} },
+    {  type:"spline",  value:"#pace1000#", tooltip:{css:"tpblue",template:function(obj) {return To_Pace(obj.pace1000);}}, item:{radius:3,borderColor: "#00ccff"}, line:{color:"#00ccff",width:2} },
+    {  type:"spline",  value:"#pace200#", tooltip:{css:"tpred", template:function(obj) {return To_Pace(obj.pace200);}}, item:{radius:3,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
   ],		  
           data: gg
         }
@@ -646,8 +646,8 @@ cols:[
       }
     }
   },  series:[
-    {  type:"line",  value:"#avg_heartrate#", tooltip:{css:"tpblue",template:function(obj) {return Math.floor(obj.avg_heartrate);}}, item:{radius:3,borderColor: "#00ccff"}, line:{color:"#00ccff",width:2} },
-    {  type:"line",  value:"#max_heartrate#", tooltip:{css:"tpred", template:function(obj) {return obj.max_heartrate;}}, item:{radius:3,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
+    {  type:"spline",  value:"#avg_heartrate#", tooltip:{css:"tpblue",template:function(obj) {return Math.floor(obj.avg_heartrate);}}, item:{radius:3,borderColor: "#00ccff"}, line:{color:"#00ccff",width:2} },
+    {  type:"spline",  value:"#max_heartrate#", tooltip:{css:"tpred", template:function(obj) {return obj.max_heartrate;}}, item:{radius:3,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
   ],		  
           data: gg
         }
@@ -689,7 +689,7 @@ cols:[
     ]
   }	,	  
   series:[
-    {  type:"line",  value:"#gain#", item:{radius:2,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
+    {  type:"spline",  value:"#gain#", item:{radius:2,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
   ],		  
           data: gg
         }
@@ -730,7 +730,7 @@ cols:[
     ]
   }	,	  
   series:[
-    {  type:"line",  value:"#gs#", item:{radius:2,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
+    {  type:"spline",  value:"#gs#", item:{radius:2,borderColor: "#EC3774"}, line:{color:"#EC3774",width:2} }
   ],		  
           data: gg
         }
