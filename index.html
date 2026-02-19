@@ -459,7 +459,6 @@ for(var i=0; i < d[0].studentTasksInfo.diaryTasks[r].tracks.length ; i++){
  tmp = tmp + ValidMin(d[0].studentTasksInfo.diaryTasks[r].tracks[i].absolute);
  }
 
-	if ( Number.isNaN(tmp) ) {  tmp = 0 ; }
         return tmp;
 
   } catch {
@@ -484,7 +483,7 @@ return mm + ":" + ss;
 t1 = "" ;
 
 for(var i = n2-1; i > n1-1 ; i--){
-  t1 = t1 + '{ "timed":"' + Valid_Timea(i,"") + '", "id":"' + i + '", "dayd":"' + d[0].studentTasksInfo.diaryTasks[i].date.slice(-2) + '"},\n'
+  t1 = t1 + '{ "timed":"' + Valid_Timea(i,0) + '", "id":"' + i + '", "dayd":"' + d[0].studentTasksInfo.diaryTasks[i].date.slice(-2) + '"},\n'
  }
 
 t1 = "[\n" + t1.slice(0,t1.length-2) + "\n]" ;
