@@ -459,6 +459,7 @@ for(var i=0; i < d[0].studentTasksInfo.diaryTasks[r].tracks.length ; i++){
  tmp = tmp + ValidMin(d[0].studentTasksInfo.diaryTasks[r].tracks[i].absolute);
  }
 
+	if ( Number.isNaN(tmp) ) {  tmp = 0 ; }
         return tmp;
 
   } catch {
