@@ -702,7 +702,8 @@ cols:[
 t1 = "" ;
 
 for(var i = n2-1; i > n1-1 ; i--){
-  t1 = t1 + '{ "gs":"' + Valid_gs(i,"") + '", "id":"' + i + '", "dayd":"' + d[0].studentTasksInfo.diaryTasks[i].date.slice(-2) + '"},\n'
+//  t1 = t1 + '{ "gs":"' + Valid_gs(i,"") + '", "id":"' + i + '", "dayd":"' + d[0].studentTasksInfo.diaryTasks[i].date.slice(-2) + '"},\n'
+  t1 = t1 + '{ "gs":"' + Valid_gs(i,0) + '", "id":"' + i + '", "dayd":"' + d[0].studentTasksInfo.diaryTasks[i].date.slice(-2) + '"},\n'
  }
 
 t1 = "[\n" + t1.slice(0,t1.length-2) + "\n]" ;
